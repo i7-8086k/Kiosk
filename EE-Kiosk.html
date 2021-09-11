@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://larsnordstrom.github.io/EE-Kiosk/ -->
+<html lang="sv-se"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="./EE-Kiosk_files/style.css">
+    <title>EE-Kiosk</title>
+    <script>
+        function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('clock').innerHTML =
+          h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};
+          return i;
+        }
+        </script>
+</head>
+<body onload="startTime()">
+
+    <div id="clock">11:31:51</div>
+
+</body></html>
